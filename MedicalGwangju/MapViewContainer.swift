@@ -12,6 +12,9 @@ class MapViewContainer: UIViewController, CLLocationManagerDelegate, GMSMapViewD
     var myLocation = MyLoc()
     let locationManager = CLLocationManager()
     let geocoder = GMSGeocoder()
+    var checkInit: Bool = true
+    var hospitalData: Array<Hospital>?
+    var mylocality: String = "" //현재 내가 속한 구
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -34,20 +37,19 @@ class MapViewContainer: UIViewController, CLLocationManagerDelegate, GMSMapViewD
     
     override func viewDidLoad() {
         
+      
         super.viewDidLoad()
         
         //현재위치 가져오기
-        
-        let coor = locationManager.location?.coordinate
-        
-        if(coor != nil){
-            myLocation.latitude = coor!.latitude
-            myLocation.longitude = coor!.longitude
+        if let coor = locationManager.location?.coordinate {
+            myLocation.latitude = coor.latitude
+            myLocation.longitude = coor.longitude
         }else{
-            print("위치정보를 가져올 수 없습니다.")
+              print("위치정보를 가져올 수 없습니다.")
+            
         }
         
-         print("내 위치 \(myLocation.latitude), \(myLocation.longitude)")
+        print("내 위치 \(myLocation.latitude), \(myLocation.longitude)")
         
         mapView = GMSMapView()
         let camera = GMSCameraPosition.camera(withLatitude: myLocation.latitude, longitude: myLocation.longitude, zoom: 13.8)
@@ -87,11 +89,24 @@ class MapViewContainer: UIViewController, CLLocationManagerDelegate, GMSMapViewD
                 let marker = GMSMarker()
                 marker.position = position.target
                 marker.title = result.lines?[0]
-               // marker.snippet = result.lines?[1]
+                
+                //각각의 구(북구,남구,서구,광산구,동구) 로컬화
+                var mylocation = NSLocalizedString(result.locality!, comment: "")
+                print(mylocation)
+                
                 marker.map = mapView
             }
- 
+            
+            
         }
+        
+        //처음 병원정보 얻어오기
+        if(checkInit){
+            hospitalData = HospitalParser(current_location: "Buk-gu").get_hospitalData()
+            checkInit = false
+        }
+        
+      
     }
     
 }

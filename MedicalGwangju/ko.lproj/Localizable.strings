@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  MedicalGwangju
+
+  Created by 조은솔 on 2018. 7. 6..
+  Copyright © 2018년 sol. All rights reserved.
+*/
+"북구" = "Buk-gu";
+"동구" = "Dong-gu";
+"남구" = "Nam-gu";
+"서구" = "Seo-gu";
+"광산구" = "Gwangsan-gu";
