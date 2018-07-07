@@ -1,11 +1,7 @@
 import UIKit
 
 class ViewController: UIViewController, XMLParserDelegate{
-
-    var datalist = [[String:String]]()
-    var detaildata = [String:String]()
-    var parseTemp:String = ""
-    var blank:Bool=true
+  
     @IBOutlet var waittingBar: UIActivityIndicatorView!
     
     @IBOutlet weak var searchButton: UIButton!
@@ -15,6 +11,10 @@ class ViewController: UIViewController, XMLParserDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+<<<<<<< HEAD
+    }
+    
+=======
         // Dongjun's UI code Start
 
         searchButton.layer.cornerRadius = 10
@@ -53,6 +53,7 @@ class ViewController: UIViewController, XMLParserDelegate{
     }
     
     
+>>>>>>> 9e787e2fc67e2ecb0413329454a9d5d6e1eb23e6
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -60,4 +61,3 @@ class ViewController: UIViewController, XMLParserDelegate{
     
     
 }
-

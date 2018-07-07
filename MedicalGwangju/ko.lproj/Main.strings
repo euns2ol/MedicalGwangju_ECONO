@@ -1,0 +1,36 @@
+
+/* Class = "UIButton"; normalTitle = "유학생이세요?"; ObjectID = "46U-bd-jpL"; */
+"46U-bd-jpL.normalTitle" = "유학생이세요?";
+
+/* Class = "UIButton"; normalTitle = "지도 뷰"; ObjectID = "JdA-C5-QTs"; */
+"JdA-C5-QTs.normalTitle" = "지도 뷰";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "KZ7-l4-mh2"; */
+"KZ7-l4-mh2.title" = "Item";
+
+/* Class = "UILabel"; text = "유학생이셈?"; ObjectID = "Kjo-k7-6g2"; */
+"Kjo-k7-6g2.text" = "유학생이셈?";
+
+/* Class = "UILabel"; text = "메인"; ObjectID = "LXN-Ak-ouV"; */
+"LXN-Ak-ouV.text" = "메인";
+
+/* Class = "UILabel"; text = "공공의료 서비스"; ObjectID = "Wbk-ov-7mC"; */
+"Wbk-ov-7mC.text" = "공공의료 서비스";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "Xhg-Iv-GRI"; */
+"Xhg-Iv-GRI.title" = "Item";
+
+/* Class = "UIButton"; normalTitle = "공공의료 서비스"; ObjectID = "bIm-G1-lBU"; */
+"bIm-G1-lBU.normalTitle" = "공공의료 서비스";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "eTZ-aZ-y7K"; */
+"eTZ-aZ-y7K.title" = "Item";
+
+/* Class = "UILabel"; text = "지도"; ObjectID = "jbV-LP-7NN"; */
+"jbV-LP-7NN.text" = "지도";
+
+/* Class = "UILabel"; text = "의료관광안내"; ObjectID = "owV-9r-tSR"; */
+"owV-9r-tSR.text" = "의료관광안내";
+
+/* Class = "UILabel"; text = "번역기"; ObjectID = "sGF-3N-yxS"; */
+"sGF-3N-yxS.text" = "번역기";

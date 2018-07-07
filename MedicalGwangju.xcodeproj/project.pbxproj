@@ -17,13 +17,24 @@
 		3866D52F20EFD512009F4271 /* search-tool.png in Resources */ = {isa = PBXBuildFile; fileRef = 3866D52E20EFD512009F4271 /* search-tool.png */; };
 		4D17A92320E4CC8C003339AE /* MapViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D17A92220E4CC8C003339AE /* MapViewContainer.swift */; };
 		4D17A92520E4D37A003339AE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D17A92420E4D37A003339AE /* MapViewController.swift */; };
-		4D8ADECC20E537E90057CD47 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8ADECB20E537E90057CD47 /* User.swift */; };
 		4D8ADED120E543DE0057CD47 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D8ADED020E543DE0057CD47 /* GoogleService-Info.plist */; };
 		4DDE6E4620C055DB000CB20C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDE6E4520C055DB000CB20C /* AppDelegate.swift */; };
 		4DDE6E4820C055DB000CB20C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDE6E4720C055DB000CB20C /* ViewController.swift */; };
 		4DDE6E4B20C055DB000CB20C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DDE6E4920C055DB000CB20C /* Main.storyboard */; };
 		4DDE6E4D20C055DB000CB20C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DDE6E4C20C055DB000CB20C /* Assets.xcassets */; };
 		4DDE6E5020C055DB000CB20C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DDE6E4E20C055DB000CB20C /* LaunchScreen.storyboard */; };
+<<<<<<< HEAD
+		4DFD27AB20EDE301007A17BC /* Hospital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFD27AA20EDE301007A17BC /* Hospital.swift */; };
+		4DFD27B320EE49DD007A17BC /* Buk-gu.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4DFD27B220EE49DD007A17BC /* Buk-gu.xml */; };
+		4DFD27B520EE8629007A17BC /* HospitalParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFD27B420EE8629007A17BC /* HospitalParser.swift */; };
+		4DFD27BA20EEA917007A17BC /* Seo-gu.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4DFD27B620EEA917007A17BC /* Seo-gu.xml */; };
+		4DFD27BB20EEA917007A17BC /* Gwangsan-gu.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4DFD27B720EEA917007A17BC /* Gwangsan-gu.xml */; };
+		4DFD27BC20EEA917007A17BC /* Nam-gu.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4DFD27B820EEA917007A17BC /* Nam-gu.xml */; };
+		4DFD27BD20EEA917007A17BC /* Dong-gu.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4DFD27B920EEA917007A17BC /* Dong-gu.xml */; };
+		4DFD27C220EEAE7D007A17BC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4DFD27C420EEAE7D007A17BC /* Localizable.strings */; };
+		FB21E785C14431F3BF378B57 /* Pods_MedicalGwangju.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F36A5E889FDAD6678BDC6040 /* Pods_MedicalGwangju.framework */; };
+=======
+>>>>>>> 9e787e2fc67e2ecb0413329454a9d5d6e1eb23e6
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +48,6 @@
 		3B58011CC5C3DA1DE19476F7 /* Pods-MedicalGwangju.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicalGwangju.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MedicalGwangju/Pods-MedicalGwangju.debug.xcconfig"; sourceTree = "<group>"; };
 		4D17A92220E4CC8C003339AE /* MapViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewContainer.swift; sourceTree = "<group>"; };
 		4D17A92420E4D37A003339AE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		4D8ADECB20E537E90057CD47 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4D8ADED020E543DE0057CD47 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4DDE6E4220C055DB000CB20C /* MedicalGwangju.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicalGwangju.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DDE6E4520C055DB000CB20C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,8 +56,24 @@
 		4DDE6E4C20C055DB000CB20C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DDE6E4F20C055DB000CB20C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DDE6E5120C055DB000CB20C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		4DFD27AA20EDE301007A17BC /* Hospital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hospital.swift; sourceTree = "<group>"; };
+		4DFD27B220EE49DD007A17BC /* Buk-gu.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Buk-gu.xml"; sourceTree = "<group>"; };
+		4DFD27B420EE8629007A17BC /* HospitalParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalParser.swift; sourceTree = "<group>"; };
+		4DFD27B620EEA917007A17BC /* Seo-gu.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Seo-gu.xml"; sourceTree = "<group>"; };
+		4DFD27B720EEA917007A17BC /* Gwangsan-gu.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Gwangsan-gu.xml"; sourceTree = "<group>"; };
+		4DFD27B820EEA917007A17BC /* Nam-gu.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Nam-gu.xml"; sourceTree = "<group>"; };
+		4DFD27B920EEA917007A17BC /* Dong-gu.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Dong-gu.xml"; sourceTree = "<group>"; };
+		4DFD27C320EEAE7D007A17BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4DFD27C520EEAEB6007A17BC /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		4DFD27C620EEAEB6007A17BC /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4DFD27C720EEAEB7007A17BC /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		748CD587E8E49D73D1733EF4 /* Pods-MedicalGwangju.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicalGwangju.release.xcconfig"; path = "Pods/Target Support Files/Pods-MedicalGwangju/Pods-MedicalGwangju.release.xcconfig"; sourceTree = "<group>"; };
+		F36A5E889FDAD6678BDC6040 /* Pods_MedicalGwangju.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedicalGwangju.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+=======
 		6D9053D1C5C0205DD5CDAE31 /* Pods_MedicalGwangju.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedicalGwangju.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D70A441DD3A27BEB0455980C /* Pods-MedicalGwangju.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicalGwangju.release.xcconfig"; path = "Pods/Target Support Files/Pods-MedicalGwangju/Pods-MedicalGwangju.release.xcconfig"; sourceTree = "<group>"; };
+>>>>>>> 9e787e2fc67e2ecb0413329454a9d5d6e1eb23e6
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +132,15 @@
 		4DDE6E4420C055DB000CB20C /* MedicalGwangju */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
+				4DFD27B920EEA917007A17BC /* Dong-gu.xml */,
+				4DFD27B720EEA917007A17BC /* Gwangsan-gu.xml */,
+				4DFD27B820EEA917007A17BC /* Nam-gu.xml */,
+				4DFD27B620EEA917007A17BC /* Seo-gu.xml */,
+				4DFD27B220EE49DD007A17BC /* Buk-gu.xml */,
+=======
 				3866D52520EFC77A009F4271 /* Images */,
+>>>>>>> 9e787e2fc67e2ecb0413329454a9d5d6e1eb23e6
 				4D8ADED020E543DE0057CD47 /* GoogleService-Info.plist */,
 				4DDE6E4520C055DB000CB20C /* AppDelegate.swift */,
 				4DDE6E4720C055DB000CB20C /* ViewController.swift */,
@@ -116,7 +150,9 @@
 				4DDE6E5120C055DB000CB20C /* Info.plist */,
 				4D17A92220E4CC8C003339AE /* MapViewContainer.swift */,
 				4D17A92420E4D37A003339AE /* MapViewController.swift */,
-				4D8ADECB20E537E90057CD47 /* User.swift */,
+				4DFD27AA20EDE301007A17BC /* Hospital.swift */,
+				4DFD27B420EE8629007A17BC /* HospitalParser.swift */,
+				4DFD27C420EEAE7D007A17BC /* Localizable.strings */,
 			);
 			path = MedicalGwangju;
 			sourceTree = "<group>";
@@ -173,6 +209,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 4DDE6E3920C055DB000CB20C;
 			productRefGroup = 4DDE6E4320C055DB000CB20C /* Products */;
@@ -189,17 +226,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
+				4DFD27BC20EEA917007A17BC /* Nam-gu.xml in Resources */,
+				4DFD27B320EE49DD007A17BC /* Buk-gu.xml in Resources */,
+				4DFD27BA20EEA917007A17BC /* Seo-gu.xml in Resources */,
+				4DFD27BD20EEA917007A17BC /* Dong-gu.xml in Resources */,
+=======
 				3866D52320EFC773009F4271 /* RuStudent.png in Resources */,
 				3866D52420EFC773009F4271 /* hospital_black.png in Resources */,
 				3866D52B20EFCFC2009F4271 /* hospital_black@2x.png in Resources */,
 				3866D52720EFCD4B009F4271 /* HomeImages1.png in Resources */,
 				3866D52A20EFCFC2009F4271 /* hospital_black@3x.png in Resources */,
 				3866D52220EFC773009F4271 /* hospital_white.png in Resources */,
+>>>>>>> 9e787e2fc67e2ecb0413329454a9d5d6e1eb23e6
 				4DDE6E5020C055DB000CB20C /* LaunchScreen.storyboard in Resources */,
+				4DFD27C220EEAE7D007A17BC /* Localizable.strings in Resources */,
 				4D8ADED120E543DE0057CD47 /* GoogleService-Info.plist in Resources */,
 				4DDE6E4D20C055DB000CB20C /* Assets.xcassets in Resources */,
 				4DDE6E4B20C055DB000CB20C /* Main.storyboard in Resources */,
+<<<<<<< HEAD
+				4DFD27BB20EEA917007A17BC /* Gwangsan-gu.xml in Resources */,
+=======
 				3866D52F20EFD512009F4271 /* search-tool.png in Resources */,
+>>>>>>> 9e787e2fc67e2ecb0413329454a9d5d6e1eb23e6
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,11 +300,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DFD27B520EE8629007A17BC /* HospitalParser.swift in Sources */,
 				4DDE6E4820C055DB000CB20C /* ViewController.swift in Sources */,
 				4D17A92320E4CC8C003339AE /* MapViewContainer.swift in Sources */,
 				4DDE6E4620C055DB000CB20C /* AppDelegate.swift in Sources */,
-				4D8ADECC20E537E90057CD47 /* User.swift in Sources */,
 				4D17A92520E4D37A003339AE /* MapViewController.swift in Sources */,
+				4DFD27AB20EDE301007A17BC /* Hospital.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +316,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4DDE6E4A20C055DB000CB20C /* Base */,
+				4DFD27C520EEAEB6007A17BC /* ko */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -274,8 +325,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				4DDE6E4F20C055DB000CB20C /* Base */,
+				4DFD27C620EEAEB6007A17BC /* ko */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4DFD27C420EEAE7D007A17BC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DFD27C320EEAE7D007A17BC /* en */,
+				4DFD27C720EEAEB7007A17BC /* ko */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -285,6 +346,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -345,6 +407,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -405,12 +468,20 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N2GAL8582Q;
 				INFOPLIST_FILE = MedicalGwangju/Info.plist;
+<<<<<<< HEAD
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+=======
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+>>>>>>> 9e787e2fc67e2ecb0413329454a9d5d6e1eb23e6
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+<<<<<<< HEAD
+				PRODUCT_BUNDLE_IDENTIFIER = com.sol.MedicalGwangju;
+=======
 				PRODUCT_BUNDLE_IDENTIFIER = com.cory.MedicalGwangju;
+>>>>>>> 9e787e2fc67e2ecb0413329454a9d5d6e1eb23e6
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -429,12 +500,20 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N2GAL8582Q;
 				INFOPLIST_FILE = MedicalGwangju/Info.plist;
+<<<<<<< HEAD
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+=======
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+>>>>>>> 9e787e2fc67e2ecb0413329454a9d5d6e1eb23e6
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+<<<<<<< HEAD
+				PRODUCT_BUNDLE_IDENTIFIER = com.sol.MedicalGwangju;
+=======
 				PRODUCT_BUNDLE_IDENTIFIER = com.cory.MedicalGwangju;
+>>>>>>> 9e787e2fc67e2ecb0413329454a9d5d6e1eb23e6
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
