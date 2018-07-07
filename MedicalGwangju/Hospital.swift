@@ -34,6 +34,7 @@ class Hospital{
     let sat_dutytime_c: String
     let sun_dutytime_c: String
     let holi_dutytime_c: String
+    var h_distance: Int = -1
     
     init(h_pid: String, h_name: String, h_div: String, h_div_name: String, h_pnumber: String,
          h_latitude: Double, h_longitude: Double, is_emergency: Int, mon_dutytime_s: String,

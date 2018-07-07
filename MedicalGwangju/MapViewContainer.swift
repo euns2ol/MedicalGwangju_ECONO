@@ -13,8 +13,11 @@ class MapViewContainer: UIViewController, CLLocationManagerDelegate, GMSMapViewD
     let locationManager = CLLocationManager()
     let geocoder = GMSGeocoder()
     var checkInit: Bool = true
-    var hospitalData: Array<Hospital>?
+    var hospitalData: Array<Hospital>? = nil
+    var hospitalParser: HospitalParser!
     var mylocality: String = "" //현재 내가 속한 구
+    var clicklocality: String = "" //클릭한 지역
+    var beforelocality: String = "" //이전 지역
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -51,14 +54,15 @@ class MapViewContainer: UIViewController, CLLocationManagerDelegate, GMSMapViewD
         
         print("내 위치 \(myLocation.latitude), \(myLocation.longitude)")
         
+        
         mapView = GMSMapView()
         let camera = GMSCameraPosition.camera(withLatitude: myLocation.latitude, longitude: myLocation.longitude, zoom: 13.8)
         mapView.camera = camera
-        
         mapView.settings.myLocationButton = true
         mapView.isMyLocationEnabled = true
-        
+       
         self.mapView.delegate = self
+        
         self.view = mapView
         
         
@@ -72,6 +76,7 @@ class MapViewContainer: UIViewController, CLLocationManagerDelegate, GMSMapViewD
     func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
         mapView.clear()
     }
+    
     
     //맵이 이동을 끝낸 후 호출 나는 이걸 사용할것이다.
     func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
@@ -89,24 +94,66 @@ class MapViewContainer: UIViewController, CLLocationManagerDelegate, GMSMapViewD
                 let marker = GMSMarker()
                 marker.position = position.target
                 marker.title = result.lines?[0]
+                self.hospitalData = nil
                 
                 //각각의 구(북구,남구,서구,광산구,동구) 로컬화
-                var mylocation = NSLocalizedString(result.locality!, comment: "")
-                print(mylocation)
+                self.clicklocality =  NSLocalizedString(result.locality!, comment: "")
                 
+                //처음 병원정보 얻어오기
+                if(self.checkInit){
+                    self.mylocality = NSLocalizedString(result.locality!, comment: "")
+                    self.hospitalParser = HospitalParser(current_location: self.mylocality)
+                    self.hospitalParser.get_hospitalData()
+                    self.beforelocality = self.mylocality
+                    self.checkInit = false
+                }
+                
+                //지도에서 구 변경시
+                else if(self.clicklocality != self.beforelocality){
+                    
+                    print("구가 변경되었습니다. 현위치: \(self.mylocality) 전 위치: \(self.beforelocality) 클릭위치: \(self.clicklocality)")
+                    //인스턴스 초기화
+                    self.hospitalParser = nil
+                    self.hospitalData = nil
+                    
+                    //각각의 구 데이터 재 생성
+                    self.hospitalParser = HospitalParser(current_location: self.mylocality)
+                    self.hospitalParser.get_hospitalData()
+                }
+                
+                self.hospitalData = self.hospitalParser.get_close_hospitalData(latitude: position.target.latitude, longitude: position.target.longitude)
+                self.beforelocality  = NSLocalizedString(result.locality!, comment: "")
                 marker.map = mapView
+                
+                
+                guard let displayHospitals = self.hospitalData else {
+                    print("나타낼 병원이 없습니다.")
+                    return
+                }
+                
+                var hospital_marker = Array<GMSMarker>()
+               
+                for hospital_item in displayHospitals{
+                    
+                        let hospital_marker_item = GMSMarker()
+                        let hospitalLocation = CLLocationCoordinate2D(latitude: hospital_item.h_latitude, longitude: hospital_item.h_longitude)
+                        hospital_marker_item.position = hospitalLocation
+                    
+                        var hospitalName: String?
+                        hospitalName = hospital_item.h_name
+                        hospital_marker_item.title = hospitalName
+                    
+                        hospital_marker.append(hospital_marker_item)
+                    }
+                
+                for marker_item in hospital_marker{
+                    marker_item.map = mapView
+                }
+ 
+            }else{
+                print("정보를 불러올 수 없습니다.")
             }
-            
-            
         }
-        
-        //처음 병원정보 얻어오기
-        if(checkInit){
-            hospitalData = HospitalParser(current_location: "Buk-gu").get_hospitalData()
-            checkInit = false
-        }
-        
-      
     }
     
 }

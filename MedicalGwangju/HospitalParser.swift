@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class HospitalParser: NSObject, XMLParserDelegate{
     
@@ -17,13 +18,15 @@ class HospitalParser: NSObject, XMLParserDelegate{
     var i: Int = 1
     var current_location: String
     
+    
+    
     init(current_location: String) {
         self.current_location = current_location
     }
     
     func get_hospitalData() -> [Hospital]? {
         
-        guard let url = Bundle.main.url(forResource: "gwangsangu", withExtension: "xml")else{
+        guard let url = Bundle.main.url(forResource: current_location, withExtension: "xml")else{
             print("URL error")
             return nil
         }
@@ -40,7 +43,7 @@ class HospitalParser: NSObject, XMLParserDelegate{
         let success:Bool = parser.parse()
         
         if success {
-            print("파싱 성공")
+            print("\(current_location) 파싱 성공  병원 수: \(hospital_list.count)")
             var dicTemp = hospital_list[0]
             
             
@@ -52,6 +55,44 @@ class HospitalParser: NSObject, XMLParserDelegate{
         return hospital_list
     }
    
+    //현위치로부터 가까운 병원 30개의 데이터를 구한다.
+    func get_close_hospitalData(latitude: Double, longitude: Double ) -> [Hospital]?{
+        
+        var rank_hospital_data = [Hospital]()
+        let startLocation = CLLocation(latitude: latitude,longitude: longitude)
+        var cnt: Int = 0
+        
+        for hospitalData in hospital_list{
+            
+            let destinationLocation = CLLocation(latitude: hospitalData.h_latitude,longitude: hospitalData.h_longitude)
+            let distance_temp: CLLocationDistance = destinationLocation.distance(from: startLocation)
+            hospitalData.h_distance = Int(distance_temp)
+            
+        }
+        
+        //거리 순(현재위치에 가까운 순서)에 따라 병원데이터 정렬
+        hospital_list = hospital_list.sorted(by: {$0.h_distance < $1.h_distance})
+        
+        for close_hospital in hospital_list{
+            
+            if(close_hospital.h_distance != -1){
+                rank_hospital_data.append(close_hospital)
+                cnt = cnt + 1
+            }
+            
+            if(cnt >= 15){
+                break
+                
+            }
+        }
+        
+        print("가까운 병원 수: \(rank_hospital_data.count)")
+        /*for hospitalData in rank_hospital_data{
+            print("병원이름: \(hospitalData.h_name) , 거리:  \(hospitalData.h_distance) ")
+        }*/
+        
+        return rank_hospital_data
+    }
     
     //element시작 잡는다 (element는 xml데이터)
     //<country>    한국        </country>
